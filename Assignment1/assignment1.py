@@ -29,7 +29,7 @@ classesT['ratio'] = classesT.apply(lambda row: ratio(row.iat[0], row.iat[2], row
 classesT['total'] = classesT.apply(lambda row: total(row.iat[0], row.iat[2], row.iat[1]), axis=1) 
 classesT['fraction_children'] = classesT.apply(lambda row: fraction(row.iat[0], row.iat[4]), axis=1) 
 classesT['fraction_elderly'] = classesT.apply(lambda row: fraction(row.iat[2], row.iat[4]), axis=1) 
-classesT['fraction_labor'] = classesT.apply(lambda row: fraction(row.iat[1], row.iat[4]), axis=1) 
+classesT['fraction_dependent'] = classesT.apply(lambda row: fraction(row.iat[0] + row.iat[2], row.iat[4]), axis=1) 
 
 # Convert index to float
 years = np.asarray(classesT.index.values, float)
@@ -46,7 +46,7 @@ ax1.legend()
 fig2, ax2 = pyplot.subplots(figsize=(5, 2.7), layout='constrained')
 ax2.plot(years, classesT['fraction_children'], label='fraction children')
 ax2.plot(years, classesT['fraction_elderly'], label='fraction elderly')
-ax2.plot(years, classesT['fraction_labor'], label='fraction labor')
+ax2.plot(years, classesT['fraction_dependent'], label='fraction dependent')
 ax2.set_xlabel('Year')  # Add an x-label to the axes.
 ax2.set_ylabel('Fraction')  # Add a y-label to the axes.
 ax2.set_title("Fraction of total population")  # Add a title to the axes.

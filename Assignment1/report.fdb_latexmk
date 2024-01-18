@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber report"] 1705427145 "report.bcf" "report.bbl" "report" 1705427355 0
+["biber report"] 1705427145 "report.bcf" "report.bbl" "report" 1705571657 0
   "./refs.bib" 1704992014 2621 27556730d3da024464e38fa5e3535b70 ""
-  "report.bcf" 1705427355 107821 0097c1a4a9d966f5f6e0c3d2a9e0eb8a "pdflatex"
+  "report.bcf" 1705571657 107821 0097c1a4a9d966f5f6e0c3d2a9e0eb8a "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1705427354 "/Users/olabratt/Documents/GitHub/DIT407/Assignment1/report.tex" "report.pdf" "report" 1705427355 0
-  "/Users/olabratt/Documents/GitHub/DIT407/Assignment1/report.tex" 1705427354 1681 9e13fdde3718f5c4ab94e772829ca3eb ""
+["pdflatex"] 1705571656 "/Users/olabratt/Documents/GitHub/DIT407/Assignment1/report.tex" "report.pdf" "report" 1705571657 0
+  "/Users/olabratt/Documents/GitHub/DIT407/Assignment1/report.tex" 1705571656 1680 707d01835e5fd18ea97e98a3b179a595 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -113,14 +113,14 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705347920 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705347917 7883460 70568dcea72fe6bb6a58295f2f571b50 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "assignment1.py" 1705427235 2295 41228a6439ce44fd20d09ac01160ddd7 ""
-  "fractions.png" 1705341473 25151 5ac0aca77d3046f5bd170023da3fc4ba ""
+  "assignment1.py" 1705571403 2320 5c04346167985ca331aebecacb07ca58 ""
+  "fractions.png" 1705571372 31562 11a833a8de67f0531c6233189ef19112 ""
   "ratio.png" 1705341466 23235 30e058095fbabcd556e637934c5e964e ""
-  "report.aux" 1705427355 1307 612e7f10b4371e2957a2717be3072728 "pdflatex"
+  "report.aux" 1705571657 1307 612e7f10b4371e2957a2717be3072728 "pdflatex"
   "report.bbl" 1705427147 1782 8928066e3bc0a6045e2c10e1d3a66187 "biber report"
-  "report.out" 1705427355 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.run.xml" 1705427355 2313 71764d4a9a10ed8a3ba4ca1c3500a605 "pdflatex"
-  "report.tex" 1705427354 1681 9e13fdde3718f5c4ab94e772829ca3eb ""
+  "report.out" 1705571657 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.run.xml" 1705571657 2313 71764d4a9a10ed8a3ba4ca1c3500a605 "pdflatex"
+  "report.tex" 1705571656 1680 707d01835e5fd18ea97e98a3b179a595 ""
   (generated)
   "report.aux"
   "report.bcf"

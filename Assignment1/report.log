@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  16 JAN 2024 18:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  18 JAN 2024 10:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -537,27 +537,27 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count426
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 24.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 28.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-<ratio.png, id=7, 369.2997pt x 203.0787pt>
+<ratio.png, id=8, 369.2997pt x 203.0787pt>
 File: ratio.png Graphic file (type png)
 <use ratio.png>
-Package pdftex.def Info: ratio.png  used on input line 36.
+Package pdftex.def Info: ratio.png  used on input line 40.
 (pdftex.def)             Requested size: 345.0pt x 189.72267pt.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ratio.png>]
-<fractions.png, id=24, 369.2997pt x 203.0787pt>
+<fractions.png, id=25, 369.2997pt x 203.0787pt>
 File: fractions.png Graphic file (type png)
 <use fractions.png>
-Package pdftex.def Info: fractions.png  used on input line 51.
+Package pdftex.def Info: fractions.png  used on input line 55.
 (pdftex.def)             Requested size: 345.0pt x 189.72267pt.
 
-Overfull \hbox (14.33044pt too wide) in paragraph at lines 66--66
+Overfull \hbox (14.33044pt too wide) in paragraph at lines 68--68
 \OT1/cmtt/m/n/10 scb . se / pxweb / sv / ssd / START _ _BE _ _BE0101 _ _BE0101A / BefolkningR1860N/$[]\OT1/cmr/m/n/10 . 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 68.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 70.
 (./assignment1.py
 Overfull \hbox (105.00458pt too wide) in paragraph at lines 6--7
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -604,8 +604,8 @@ Overfull \hbox (249.00604pt too wide) in paragraph at lines 31--32
  []
 
 
-Overfull \hbox (237.00592pt too wide) in paragraph at lines 32--34
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (339.00696pt too wide) in paragraph at lines 32--34
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -634,7 +634,7 @@ Overfull \hbox (81.00433pt too wide) in paragraph at lines 48--49
  []
 
 
-Overfull \hbox (57.00409pt too wide) in paragraph at lines 49--50
+Overfull \hbox (105.00458pt too wide) in paragraph at lines 49--50
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -653,16 +653,16 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  18406 strings out of 476025
  316626 string characters out of 5790017
- 1929388 words of memory out of 5000000
+ 1927388 words of memory out of 5000000
  38607 multiletter control sequences out of 15000+600000
  519429 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,76p,731b,1853s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on report.pdf (3 pages, 146244 bytes).
+Output written on report.pdf (3 pages, 151122 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 149 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
  64 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
