@@ -47,6 +47,62 @@
       \verb https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__BE__BE0101__BE0101A/BefolkningR1860N/
       \endverb
     \endentry
+    \entry{Eurostat:2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e255f5b2c12914de644255c4ef04cbca}{%
+           family={Eurostat},
+           familyi={E\bibinitperiod},
+           given={Statistics\bibnamedelima Explained},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e255f5b2c12914de644255c4ef04cbca}
+      \strng{fullhash}{e255f5b2c12914de644255c4ef04cbca}
+      \strng{bibnamehash}{e255f5b2c12914de644255c4ef04cbca}
+      \strng{authorbibnamehash}{e255f5b2c12914de644255c4ef04cbca}
+      \strng{authornamehash}{e255f5b2c12914de644255c4ef04cbca}
+      \strng{authorfullhash}{e255f5b2c12914de644255c4ef04cbca}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Retrieved 2024-01-20}
+      \field{title}{Population projections in the EU}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=497115
+      \endverb
+      \verb{url}
+      \verb https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=497115
+      \endverb
+    \endentry
+    \entry{Skiena:2024}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6469758c26f38311045f7d517ca3f157}{%
+           family={Skiena},
+           familyi={S\bibinitperiod},
+           given={Steven\bibnamedelima S},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6469758c26f38311045f7d517ca3f157}
+      \strng{fullhash}{6469758c26f38311045f7d517ca3f157}
+      \strng{bibnamehash}{6469758c26f38311045f7d517ca3f157}
+      \strng{authorbibnamehash}{6469758c26f38311045f7d517ca3f157}
+      \strng{authornamehash}{6469758c26f38311045f7d517ca3f157}
+      \strng{authorfullhash}{6469758c26f38311045f7d517ca3f157}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Retrieved 2024-01-20}
+      \field{title}{The Data Science Design Manual}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://ebookcentral.proquest.com/lib/gu/detail.action?docID=6312797
+      \endverb
+      \verb{url}
+      \verb https://ebookcentral.proquest.com/lib/gu/detail.action?docID=6312797
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  18 JAN 2024 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  20 JAN 2024 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -452,7 +452,25 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count410
 \lst@gtempboxa=\box54
 \lst@token=\toks23
@@ -479,25 +497,25 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
  (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-Package hyperref Info: Link coloring OFF on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+Package hyperref Info: Link coloring OFF on input line 17.
  (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
@@ -515,8 +533,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 15.
-Package biblatex Info: Reference segment=0 on input line 15.
+Package biblatex Info: Reference section=0 on input line 17.
+Package biblatex Info: Reference segment=0 on input line 17.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count420
@@ -537,113 +555,31 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count426
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 28.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 30.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-<ratio.png, id=8, 369.2997pt x 203.0787pt>
-File: ratio.png Graphic file (type png)
-<use ratio.png>
-Package pdftex.def Info: ratio.png  used on input line 40.
-(pdftex.def)             Requested size: 345.0pt x 189.72267pt.
+<ratio.pdf, id=10, 361.35pt x 195.07466pt>
+File: ratio.pdf Graphic file (type pdf)
+<use ratio.pdf>
+Package pdftex.def Info: ratio.pdf  used on input line 49.
+(pdftex.def)             Requested size: 345.0pt x 186.24857pt.
  [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ratio.png>]
-<fractions.png, id=25, 369.2997pt x 203.0787pt>
-File: fractions.png Graphic file (type png)
-<use fractions.png>
-Package pdftex.def Info: fractions.png  used on input line 55.
-(pdftex.def)             Requested size: 345.0pt x 189.72267pt.
-
-Overfull \hbox (14.33044pt too wide) in paragraph at lines 68--68
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ratio.pdf>]
+<fractions.pdf, id=59, 463.5061pt x 259.73729pt>
+File: fractions.pdf Graphic file (type pdf)
+<use fractions.pdf>
+Package pdftex.def Info: fractions.pdf  used on input line 64.
+(pdftex.def)             Requested size: 345.0pt x 193.32814pt.
+ [2 <./fractions.pdf>]
+Overfull \hbox (14.33044pt too wide) in paragraph at lines 87--87
 \OT1/cmtt/m/n/10 scb . se / pxweb / sv / ssd / START _ _BE _ _BE0101 _ _BE0101A / BefolkningR1860N/$[]\OT1/cmr/m/n/10 . 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 70.
-(./assignment1.py
-Overfull \hbox (105.00458pt too wide) in paragraph at lines 6--7
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (57.00409pt too wide) in paragraph at lines 7--8
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (123.00476pt too wide) in paragraph at lines 10--11
-[][][][][][][][][][][][][][][][][]
- []
-
-[2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./fractions.png>]
-Overfull \hbox (237.00592pt too wide) in paragraph at lines 18--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (195.0055pt too wide) in paragraph at lines 22--23
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (237.00592pt too wide) in paragraph at lines 28--29
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (237.00592pt too wide) in paragraph at lines 29--30
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (255.0061pt too wide) in paragraph at lines 30--31
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (249.00604pt too wide) in paragraph at lines 31--32
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (339.00696pt too wide) in paragraph at lines 32--34
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (57.00409pt too wide) in paragraph at lines 38--39
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.00372pt too wide) in paragraph at lines 42--43
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (57.00409pt too wide) in paragraph at lines 46--47
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (93.00446pt too wide) in paragraph at lines 47--48
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (81.00433pt too wide) in paragraph at lines 48--49
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (105.00458pt too wide) in paragraph at lines 49--50
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (93.00446pt too wide) in paragraph at lines 52--53
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) [3] (./report.aux)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 103.
+ (./assignment1.py [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [4] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'report.run.xml'.
@@ -651,18 +587,18 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18406 strings out of 476025
- 316626 string characters out of 5790017
- 1927388 words of memory out of 5000000
- 38607 multiletter control sequences out of 15000+600000
- 519429 words of font info for 59 fonts, out of 8000000 for 9000
+ 19171 strings out of 476025
+ 326480 string characters out of 5790017
+ 2154388 words of memory out of 5000000
+ 39351 multiletter control sequences out of 15000+600000
+ 519740 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,76p,731b,1853s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on report.pdf (3 pages, 151122 bytes).
+ 75i,6n,76p,731b,2069s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on report.pdf (4 pages, 204174 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
+ 69 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
