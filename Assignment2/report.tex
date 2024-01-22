@@ -1,0 +1,58 @@
+
+
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{stmaryrd}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+
+
+\addbibresource{refs.bib}
+
+\begin{document}
+
+\author{Ola Bratt \\
+  \href{mailto:ola.bratt@gmail.com}{ola.bratt@gmail.com}
+  \and
+  Patrick Attimont \\
+  \href{patrickattimont@gmail.com}{patrickattimont@gmail.com}
+}
+
+\title{DAT565/DIT407 Assignment 2}
+\date{2024-01-xx}
+
+\maketitle
+
+This paper is addressing the assignment 2 study queries within the \emph{Introduction to Data Science \& AI}, DIT407 course at 
+the University of Gothenburg. The main source of information for this project
+is derived from the lectures and Skiena~\cite{Skiena:2024}. 
+\section*{Problem 1: Scrapping house prices}
+
+
+\newpage
+
+\printbibliography
+
+\section*{Appendix: Source Code}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily,
+  commentstyle=\color{OliveGreen},
+  keywordstyle=\bfseries\color{Magenta},
+  stringstyle=\color{YellowOrange},
+  numbers=left,
+  basicstyle=\footnotesize,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
+
+
+%\lstinputlisting{assignment2.py}
+
+\end{document}
