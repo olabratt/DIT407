@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber report"] 1705908743 "report.bcf" "report.bbl" "report" 1706033193 0
+["biber report"] 1706033302 "report.bcf" "report.bbl" "report" 1706033310 0
   "./refs.bib" 1705758866 3217 69498ede8ea7a72dc0b3b054306da270 ""
-  "report.bcf" 1706033193 107761 0415bfd5e3a57cc9ca47157887b0ae3e "pdflatex"
+  "report.bcf" 1706033310 107761 0415bfd5e3a57cc9ca47157887b0ae3e "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1706033192 "/Users/olabratt/Documents/GitHub/DIT407/Assignment2/report.tex" "report.pdf" "report" 1706033193 0
-  "/Users/olabratt/Documents/GitHub/DIT407/Assignment2/report.tex" 1706033192 1298 c2c4c5ff0f3f0bdc97a6678e96c39f5f ""
+["pdflatex"] 1706033309 "/Users/olabratt/Documents/GitHub/DIT407/Assignment2/report.tex" "report.pdf" "report" 1706033310 0
+  "/Users/olabratt/Documents/GitHub/DIT407/Assignment2/report.tex" 1706033301 1299 d243dd878e2a2ef577e7fde6e6e87bd9 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -115,11 +115,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705347920 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705347917 7883460 70568dcea72fe6bb6a58295f2f571b50 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "report.aux" 1706033193 796 ae88ad32866da7196042c0eaafc968aa "pdflatex"
-  "report.bbl" 1705908777 1743 d8186444db7c742f0a6721bf5e8e8ec4 "biber report"
-  "report.out" 1706033193 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.run.xml" 1706033193 2313 71764d4a9a10ed8a3ba4ca1c3500a605 "pdflatex"
-  "report.tex" 1706033192 1298 c2c4c5ff0f3f0bdc97a6678e96c39f5f ""
+  "report.aux" 1706033310 796 ae88ad32866da7196042c0eaafc968aa "pdflatex"
+  "report.bbl" 1706033308 1743 d8186444db7c742f0a6721bf5e8e8ec4 "biber report"
+  "report.out" 1706033310 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.run.xml" 1706033310 2313 71764d4a9a10ed8a3ba4ca1c3500a605 "pdflatex"
+  "report.tex" 1706033301 1299 d243dd878e2a2ef577e7fde6e6e87bd9 ""
   (generated)
   "report.aux"
   "report.bcf"
