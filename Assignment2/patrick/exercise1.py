@@ -1,9 +1,7 @@
 import glob
 import pandas as pd
-import numpy as np
 import locale
 import datetime
-import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 import re
 
@@ -52,7 +50,6 @@ def extractAllData(text):
     for result in text:
         date = extractDate(result.find('span', class_='hcl-label hcl-label--state hcl-label--sold-at').text)
         address = extractAdress(result.find('h2', class_='sold-property-listing__heading qa-selling-price-title hcl-card__title').text)
-        # print(result.find('span', class_='property-icon property-icon--result').parent.findAll(text=True, recursive=False))
         estateLocation = extractEstateLocation(''.join(result.find('span', class_='property-icon property-icon--result').parent.findAll(text=True, recursive=False)))
         boarea = extractBoarea(result.find('div', class_='sold-property-listing__subheading sold-property-listing__area').text)
         biarea = extractBiarea(result.find('span', class_='listing-card__attribute--normal-weight').text if result.find('span', class_='listing-card__attribute--normal-weight') else '')
