@@ -10,6 +10,8 @@
 \usepackage{stmaryrd}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
 
 
 \addbibresource{refs.bib}
@@ -35,6 +37,36 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}.
 
 \section*{Problem 2: Analyzing 2022 house sales}
 
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[a]{\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{histogram_closing_price.pdf}
+      \caption{Closing price of houses}
+      \label{fig:histogram_closing_price}
+  \end{subfigure}
+  \vfill
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{closing_price_house_ares.pdf}
+      \caption{Closing price vs house area}
+      \label{fig:closing_price_house_ares}
+  \end{subfigure}
+  \vfill
+  \begin{subfigure}[c]{\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{closing_price_house_ares_color.pdf}
+      \caption{Closing price vs house area with color}
+      \label{fig:closing_price_house_ares_color}
+  \end{subfigure}
+     \caption{Plots of house prices}
+     \label{fig:house_plots}
+\end{figure}
+
+
+\newpage
+
 \section*{Discussion}
 
 \newpage
@@ -57,6 +89,6 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}.
 }
 
 
-%\lstinputlisting{assignment2.py}
+\lstinputlisting{ola/assignment2.py}
 
 \end{document}
