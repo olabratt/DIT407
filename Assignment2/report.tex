@@ -48,10 +48,9 @@ describe()
 \end{verbatim}
 on the dataframe containing the closing prices. The result can be seen in table~\ref{tabular:five_number_summary}.\\
 
-When plotting the histogram of the closing prices, see figure~\ref{fig:histogram_closing_price} we used \emph{square root method} to decide bin size. 
-It seems appropriate since it revelas trends without hiding the details. The plot is skewed to the right, which is expected since there are few houses with high prices. 
-The plot of closing price vs house area is shown in figure~\ref{fig:closing_price_house_ares}. 
-The plot of closing price vs house area with color is shown in figure~\ref{fig:closing_price_house_ares_color}.
+When generating the histogram depicting closing prices (see Figure~\ref{fig:histogram_closing_price}), we employed the "square root method" to determine the bin size. This method was chosen for its ability to unveil trends while maintaining a balance, as larger bins would obscure relevant features, such as the dip around 4.000.000 kr. The resulting plot exhibits a right skew, which is expected given the scarcity of high-priced houses.
+
+Figure~\ref{fig:closing_price_house_ares} displays the relationship between closing prices and house areas, while Figure~\ref{fig:closing_price_house_ares_color} illustrates the same relationship, with the number of rooms colorized.
 
 
 \begin{table}
