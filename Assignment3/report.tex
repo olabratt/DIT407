@@ -33,13 +33,32 @@
 
 This paper is addressing the assignment 3 study queries within the \emph{Introduction to Data Science \& AI} course, DIT407 at 
 the University of Gothenburg and DAT565 at Chalmers. The main source of information for this project
-is derived from the lectures and Skiena~\cite{Skiena:2024}. 
+is derived from the lectures and Skiena~\cite{Skiena:2024}. Assignment 3 is about text classification and the 
+use of correct data splitting and encoding handling.
 
 \section*{Problem 1: Spam and Ham}
 
-\section*{Problem 2: Preprocessing}
+\subsection*{A. Data exploration}
 
+\subsection*{B. Data splitting}
+
+\begin{verbatim}
+  X_train, X_test, y_train, y_test = 
+  train_test_split(email_matrix, labels, test_size=0.2)
+\end{verbatim}
+\section*{Problem 2: Preprocessing}
+The "bag of words" model is a basic and intuitive way to analyze and compare documents based on their textual content. 
+However, it does not consider the context or the order of words, which can limit its effectiveness in capturing the semantics 
+and meaning of the text.
 \section*{Problem 3: Easy Ham}
+
+
+\begin{verbatim}
+  accuracy = accuracy_score(y_test, y_pred)
+  precision = precision_score(y_test, y_pred)
+  recall = recall_score(y_test, y_pred)
+  conf_matrix = confusion_matrix(y_test, y_pred)
+\end{verbatim}
 
 \begin{table}
   \begin{center}
@@ -47,8 +66,8 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}.
     \hline
     \text{Model} & \text{accuracy} & \text{precision} & \text{recall} & \text{F1 score}\\
     \hline
-    \text{Multinomial Naive Bayes} & 0.9852700490998363 & 0.9844357976653697 & 0.9980276134122288 & 0.991185112634672 \\
-    \text{Bernoulli Naive Bayes} & 0.9230769230769231 & 0.9181818181818182 & 0.9960552268244576 & 0.9555345316934721 \\
+    \text{Multinomial Naive Bayes} & 0.985 & 0.984 & 0.998 & 0.991 \\
+    \text{Bernoulli Naive Bayes} & 0.923 & 0.918 & 0.996 & 0.956 \\
   \end{tabular}
 \end{center}
 \caption{Precision and accuracy for Easy Ham and Spam}
@@ -85,8 +104,8 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}.
     \hline
     \text{Model} & \text{accuracy} & \text{precision} & \text{recall} & \text{F1 score}\\
     \hline
-    \text{Multinomial Naive Bayes} & 0.9470198675496688 & 0.9555555555555556 & 0.8775510204081632 & 0.9148936170212767 \\
-    \text{Bernoulli Naive Bayes} & 0.9337748344370861 & 0.975609756097561 & 0.8163265306122449 & 0.888888888888889 \\
+    \text{Multinomial Naive Bayes} & 0.947 & 0.956 & 0.878 & 0.915 \\
+    \text{Bernoulli Naive Bayes} & 0.934 & 0.976 & 0.816 & 0.889 \\
   \end{tabular}
 \end{center}
 \caption{Precision and accuracy for Hard Ham and Spam}
@@ -135,6 +154,6 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}.
 }
 
 
-%\lstinputlisting{ola/assignment3.py}
+\lstinputlisting{ola/assignment3.py}
 
 \end{document}
