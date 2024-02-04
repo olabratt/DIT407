@@ -36,6 +36,7 @@ def parse_tar_bz2(file_path):
 
 def evaluate_model(y_test, y_pred, title, classifier):
 
+    # Calculate accuracy, precision, recall, and F1 score
     accuracy = accuracy_score(y_test, y_pred)
     precision = precision_score(y_test, y_pred)
     recall = recall_score(y_test, y_pred)
@@ -44,6 +45,7 @@ def evaluate_model(y_test, y_pred, title, classifier):
     print(title + " and spam " + classifier + " recall:", recall)
     print(title + " and spam " + classifier + " F1 score:", 2 * (precision * recall) / (precision + recall))
 
+    # Create confusion matrix
     conf_matrix = confusion_matrix(y_test, y_pred)
     fig, ax = pyplot.subplots(figsize=(8, 6), layout='constrained')
     sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', 
@@ -66,6 +68,7 @@ def classify_email(emails, labels, title):
     email_matrix = vectorizer.fit_transform(emails)
     # Split data into training and test sets, with 20% of data reserved for testing
     X_train, X_test, y_train, y_test = train_test_split(email_matrix, labels, test_size=0.2)
+    print('Size of test set (' + title + '):', len(y_test))
 
     # Train classifier (Multinomial Naive Bayes and Bernoulli Naive Bayes)
     classifierMNB = MultinomialNB()
@@ -73,14 +76,15 @@ def classify_email(emails, labels, title):
     classifierMNB.fit(X_train, y_train)
     classifierBNB.fit(X_train, y_train)
 
-    # Evaluate the classifier
+    # Predict labels for test set
     y_predMNB = classifierMNB.predict(X_test)
     y_predBNB = classifierBNB.predict(X_test)
     
    
-
+    # Evaluate the classifier
     evaluate_model(y_test, y_predMNB, title, "Multinomial Naive Bayes")
     evaluate_model(y_test, y_predBNB, title, "Bernoulli Naive Bayes")
+
 
 pyplot.rcParams['text.usetex'] = True
 file_path_easy_ham = "../20021010_easy_ham.tar.bz2"  
@@ -95,6 +99,10 @@ emails_easy_and_spam = emails_easy_ham + emails_spam
 
 labels_hard_and_spam = [1] * len(emails_hard_ham) + [0] * len(emails_spam)
 emails_hard_and_spam = emails_hard_ham + emails_spam
+
+print("Number of easy ham emails:", len(emails_easy_ham))
+print("Number of hard ham emails:", len(emails_hard_ham))
+print("Number of spam emails:", len(emails_spam))
 
 classify_email(emails_easy_and_spam, labels_easy_and_spam, "Easy ham")
 classify_email(emails_hard_and_spam, labels_hard_and_spam, "Hard ham")
