@@ -39,6 +39,13 @@ use of correct data splitting and encoding handling.
 \section*{Problem 1: Spam and Ham}
 
 \subsection*{A. Data exploration}
+Spam is often recognizable for a human being as advertising a product.
+Spam emails will often use hyperbolic adjectives to showcase or promote something, as well as links to different websites.
+The end of the email could also be important to identify spam: it usually contains a paragraph stating that the user is subscribed to an email program with a link to unsubscribe.
+This is an easily recognizable pattern for the classifier since it often uses the same words.
+
+Hard ham seems to be closer to spam as it contains promotion emails and newsletter from websites and companies the user has subscribed to.
+Therefore it can be more difficult for the classifier to separate the different emails.
 
 \subsection*{B. Data splitting}
 Since we have a large dataset, we can use the \texttt{train\_test\_split} function from the \texttt{sklearn.model\_selection}. With a smaller
