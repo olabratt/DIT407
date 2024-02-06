@@ -66,7 +66,8 @@ Accuracy measure the proportion of true results among the total number of cases 
 Precision measures the proportion of true positive results among the total number of cases that were predicted to be positive, this is calculated according to Equation~\ref{equation:precision}. 
 Recall measures the proportion of true positive results among the total number of cases that were actually positive, this is calculated according to Equation~\ref{equation:recall}.
 F1 score is the harmonic mean of precision and recall, this is calculated according to Equation~\ref{equation:f1}.
-These metrics are used to evaluate the performance of the models. Higher values are better.
+These metrics are used to evaluate the performance of the models. 
+Valuse close to 1 indicates that a high percentage of the classifier's predictions are correct. 
 
 The accuracy, precision, recall, and F1 score for the easy ham and spam dataset are shown in Table~\ref{tabular:easy_summary}. 
 The confusion matrixes for the easy ham and spam dataset are shown in Figure~\ref{fig:easy_ham_and_spam_confusion_matrix}.
@@ -126,6 +127,19 @@ The confusion matrixes for the easy ham and spam dataset are shown in Figure~\re
 The accuracy, precision, recall, and F1 score for the hard ham and spam dataset are shown in Table~\ref{tabular:hard_summary}.
 The confusion matrixes for the hard ham and spam dataset are shown in Figure~\ref{fig:hard_ham_and_spam_confusion_matrix}.
 
+There are 501 emails categoried as spam, 2551 emails categorized as easy ham, while only 250 emails are labeled as hard ham, making the dataset for easy ham significantly larger. 
+Consequently, there is more data available to train the models for easy ham, suggesting that these models should perform better.
+
+During the model training process, we split the data in the same manner for both easy and hard ham, 
+with \text{20\%} allocated for testing and \text{80\%} for training. Given the substantial dataset difference between easy and hard ham, 
+some may propose adjusting the data split, potentially allocating \text{30\%} for testing and \text{70\%} for training for easy ham.
+
+Upon examining the metrics, it becomes evident that the models for easy ham generally exhibit superior performance. Specifically, 
+the Multinomial Naive Bayes model outperformed the other model.
+
+Interestingly, when comparing the confusion matrices, the models encountered difficulty in correctly identifying ham emails in the hard ham category, 
+but demonstrated better success in identifying spam. Conversely, for easy ham, the trend was reversed: the models excelled at identifying ham emails but struggled more with identifying spam. 
+This is likely due to the distribution of the different email types.
 
 \begin{table}
   \begin{center}
