@@ -20,6 +20,7 @@ df_train, df_test = train_test_split(df, test_size=0.2 ,random_state=SEED)
 
 ## Problem 2
 
+print("\n====== Problem 2 ======\n")
 # max_coeff = 0
 # max_column = ""
 
@@ -70,18 +71,24 @@ plt.ylabel("Life expectancy at birth (LEB) in years")
 plt.show()
 
 # Problem 3
+print("\n====== Problem 3 ======\n")
+correlation = df_train.drop(hdi_column, axis = 1).corr(method='spearman')[leb_column].drop(leb_column)
+max_corr_column = correlation.abs().idxmax()
+max_corr = correlation.abs().max()
+print("Maximum correlation variable : ", max_corr_column)
+print("Spearman correlation coefficient :", max_corr)
+df = df_train[df_train[max_corr_column].notna()]
+p = pearsonr(df[max_corr_column], df[leb_column])[0]
+print("Pearson correlation coefficient before applying log function :", p)
+p = pearsonr(np.log(df[max_corr_column]), df[leb_column])[0]
+print("Pearson correlation coefficient after applying log function :", p)
 
-df = pd.DataFrame()
-df[leb_column] = df_train[leb_column]
-for column in df_train.drop(leb_column, axis = 1):
-    try:
-        df[f'log {column}'] = np.log(df_train[column])
-        df[f'square {column}'] = np.square(df_train[column])
-        df[f'reciprocal {column}'] = 1/df_train[column]
-        df[f'sqrt {column}'] = np.sqrt(df_train[column])
-    except Exception:
-        pass
-
-correlation = df.corr(method = 'spearman')[leb_column].drop(leb_column, axis = 0)
-print(correlation.abs().idxmax())
-print(correlation.abs().max())
+# Problem 4
+print("\n====== Problem 4 ======\n")
+df_train = df_train.drop(hdi_column, axis = 1)
+correlation = df_train.corr(method='pearson')[leb_column].drop(leb_column)
+max_corr_columns = [correlation.abs().idxmax()]
+max_corr_columns.append(correlation.drop(max_corr_columns[0]).abs().idxmax())
+print("Best variables :", max_corr_columns)
+print("Pearson correlation coefficients :", correlation[max_corr_columns[0]], correlation[max_corr_columns[1]])
+print(pearsonr([df_train[max_corr_columns[0]], df_train[max_corr_columns[1]]], df_train[leb_column]))
