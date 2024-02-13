@@ -87,6 +87,8 @@ entities.to_csv('entities.csv', index=False, encoding='utf-8')
 
 pyplot.rcParams['text.usetex'] = True
 entities = pd.read_csv('entities.csv')
+entities['Date'] = pd.to_datetime(entities['Date'])
+entities = entities[entities['Date'].dt.year == 2022]
 #print(entities.head())
 print(entities['Price'].describe())
 
