@@ -64,19 +64,26 @@ Coefficients:  [48.00427807]
 
 \section*{Problem 3: Non-linear relationship}
 
-The variable 'Median Age, as of 1 July (years)' has the strongest spearman correlation with a coefficient of 0.91.
-Trained model with the following variables :  Median Age, as of 1 July (years)
-The mean squared error for is 13.58.
-Coefficients:  [0.97733383]
-Trained model with the following variables [Log]:  Median Age, as of 1 July (years)
-The mean squared error for is 11.52.
-Coefficients:  [25.2134191]
-Trained model with the following variables [Sqrt]:  Median Age, as of 1 July (years)
-The mean squared error for is 12.23.
-Coefficients:  [10.04870697]
-Trained model with the following variables [Reciprocal]:  Median Age, as of 1 July (years)
-The mean squared error for is 12.12.
-Coefficients:  [-590.89561302]
+To explore variables with non-linear relationships, we initially assess Spearman correlation coefficients, Figure~\ref{fig:spearman_correlation}. 
+Initially, we eliminate the variable exhibiting the strongest Pearson correlation, namely 'Human Development Index (value)'. Subsequently, we examine the Spearman correlation.
+
+Our analysis reveals that 'Median Age, as of 1 July (years)' exhibits the most robust Spearman correlation. Subsequently, 
+we develop a linear model using this variable to determine the mean squared error, which amounts to 13.58, Figure~\ref{fig:reg_median_age}.
+
+Next, we apply transformations to the variable using logarithmic, square root, and reciprocal functions, respectively  Figure~\ref{fig:linear_transformation}. 
+For each transformation, we train a linear model to ascertain the resulting mean squared error. The logarithmic transformation yields the lowest mean squared error, measuring 11.52.  Figure~\ref{fig:reg_median_age_log}.
+
+Before transformation, the Pearson correlation registers at 0.898, while after transformation, it increases marginally to 0.913.
+
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=\textwidth]{ola/spearman_correlation.pdf}
+    \caption{Correlation Spearman}
+    \label{fig:spearman_correlation}
+  \end{center}
+\end{figure}
+
 
 \begin{figure}[h]
   \begin{center}
@@ -102,25 +109,18 @@ Coefficients:  [-590.89561302]
       \label{fig:reg_median_age_log}
   \end{subfigure}
   \caption{Linear Regression Median Age}
-  \label{fig:easy_ham_and_spam_confusion_matrix}
+  \label{fig:linear_regression_median_age}
 \end{figure}
 
 \section*{Problem 4: Mulitple linear regression}
 
+We employ Spearman correlation analysis to identify variables with strong correlations. Utilizing a predefined threshold, we pinpoint variables with significant impact. 
+Through experimentation with various thresholds, we determine that a threshold of 0.85 yields favorable results without excessive variable inclusion.
 
-Trained model with the following variables :  
-Expected Years of Schooling, female (years), Coefficient of human inequality, Gross National Income Per Capita (2017), Median Age, as of 1 July (years), Rate of Natural Change (per 1,000 population), Crude Birth Rate (births per 1,000 population), Total Fertility Rate (live births per woman), Net Reproduction Rate (surviving daughters per woman)
-The mean squared error for is 2.00.
-Coefficients:  [ 1.97636709e-01 -5.71354865e-02  2.43338211e-05  6.09725338e-01
-  1.65356641e+00 -2.12322985e+00  1.91227138e+00  3.04603432e+00]
+The identified variables include: Expected Years of Schooling, female (years), Coefficient of human inequality, Gross National Income Per Capita (2017), Median Age as of 1 July (years), Rate of Natural Change (per 1,000 population), Crude Birth Rate (births per 1,000 population), Total Fertility Rate (live births per woman), and Net Reproduction Rate (surviving daughters per woman).
 
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[width=\textwidth]{ola/spearman_correlation.pdf}
-    \caption{Correlation Spearman}
-    \label{fig:spearman_correlation}
-  \end{center}
-\end{figure}
+Conducting a multiple linear regression analysis results in a mean squared error of 2.03. The coefficients for the model are as follows: [19, -571, 243338, 61, 1.7, -2.1, 1.9, 3].
+
 
 
 
