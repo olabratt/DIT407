@@ -21,18 +21,18 @@ df_train, df_test = train_test_split(df, test_size=0.2 ,random_state=SEED)
 ## Problem 2
 
 print("\n====== Problem 2 ======\n")
-# max_coeff = 0
-# max_column = ""
+max_coeff = 0
+max_column = ""
 
-# for column in df_train.drop(leb_column, axis=1):
-#     df_notna = df_train[df_train[column].notna()]
-#     r = pearsonr(df_notna[leb_column], df_notna[column])[0]
-#     if r > max_coeff:
-#         max_coeff = r
-#         max_column = column
+for column in df_train.drop(leb_column, axis=1):
+    df_notna = df_train[df_train[column].notna()]
+    r = pearsonr(df_notna[leb_column], df_notna[column])[0]
+    if r > max_coeff:
+        max_coeff = r
+        max_column = column
 
-# print("Variable with the strongest linear relationship :", max_column)
-# print("Pearson correlation coefficient :", max_coeff)
+print("Variable with the strongest linear relationship :", max_column)
+print("Pearson correlation coefficient :", max_coeff)
 
 hdi_column = 'Human Development Index (value)'
 df_notna = df_train[df_train[hdi_column].notna()]
@@ -43,7 +43,7 @@ model = LinearRegression().fit(x, y)
 y_pred = model.predict(x)
 print("Coefficient of determination :", r2_score(y, y_pred))
 print("Slope of the line :", model.coef_)
-print("Intercept of the line :", model.coef_)
+print("Intercept of the line :", model.intercept_)
 
 # xfit = np.linspace(x.min()[0], x.max()[0], 1000)
 # yfit = model.predict(xfit[:, np.newaxis])
@@ -91,4 +91,4 @@ max_corr_columns = [correlation.abs().idxmax()]
 max_corr_columns.append(correlation.drop(max_corr_columns[0]).abs().idxmax())
 print("Best variables :", max_corr_columns)
 print("Pearson correlation coefficients :", correlation[max_corr_columns[0]], correlation[max_corr_columns[1]])
-print(pearsonr([df_train[max_corr_columns[0]], df_train[max_corr_columns[1]]], df_train[leb_column]))
+# print(pearsonr([df_train[max_corr_columns[0]], df_train[max_corr_columns[1]]], df_train[leb_column]))
