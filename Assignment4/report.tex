@@ -40,12 +40,15 @@ The dataset is large enough to be separated into a train and a test set. We use 
 
 
 \section*{Problem 2: Single-variable model}
-To identify the variable with the strongest linear relationship with the target variable, we use the \verb|corr| function specifying the Pearson method to get a correlation matrix between all the variables, and take the column corresponding to the target variable.
+To identify the variable with the strongest linear relationship with the target variable, we use the \verb|corr| function specifying the Pearson method to get a correlation matrix between all the variables (Fig~\ref{fig:pearson_correlation}), and take the column corresponding to the target variable.
 
 The variable with the highest absolute pearson coefficient is the Human development index, with a value of 0.92.
 Fig~\ref{fig:reg_human_development_index} shows the linear regression applied on the test set, using the model built on the train set.
 The model has a slope of 48.2, an intercept of 37.3, and a determination coefficient of 0.86. These values obviously slightly change depending on the seed used to split the data.
-The mean squared error for is 9.45.
+The mean squared error between the test and predicted sets is 9.45.
+
+The human development index measures a country's social and economic development. As specified on UNDP's website (\cite{UNDP:2023}), it is calculated based on the following factors: life expectancy, education, and standard of living.
+Thus the strong relationship between the two variables comes from the fact that life expectancy at birth is used to calculate the human development index.
 
 
 \begin{figure}[h]
