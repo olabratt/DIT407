@@ -52,6 +52,9 @@ def train_linear_regression_model(X_train, X_test, y_train, y_test, variables, p
     mse = mean_squared_error(y_test, y_pred)
     print("Trained model with the following variables " + prefix + ": ", variables)
     print(f"The mean squared error for is {mse:.2f}.")
+    print(f"The r2 score is {r2:.2f}.")
+    print("Coefficients: ", model.coef_)
+    print("Intercept of the line :", model.intercept_)
 
 def transform_variable(X_train, y_train, correlation_variable):
     pd.options.mode.chained_assignment = None

@@ -27,7 +27,7 @@
 }
 
 \title{DAT565/DIT407 Assignment 4}
-\date{2024-02-xx}
+\date{2024-02-15}
 
 \maketitle
 
@@ -119,12 +119,18 @@ Before transformation, the Pearson correlation registers at 0.898, while after t
 
 \section*{Problem 4: Mulitple linear regression}
 
-We employ Spearman correlation analysis to identify variables with strong correlations. Utilizing a predefined threshold, we pinpoint variables with significant impact. 
-Through experimentation with various thresholds, we determine that a threshold of 0.85 yields favorable results without excessive variable inclusion.
+We utilized Spearman correlation analysis as a method to distinguish variables exhibiting strong correlations with our target. 
+By setting a predetermined threshold, we aimed to identify variables exerting significant influence on the target variable.
 
-The identified variables include: Expected Years of Schooling, female (years), Coefficient of human inequality, Gross National Income Per Capita (2017), Median Age as of 1 July (years), Rate of Natural Change (per 1,000 population), Crude Birth Rate (births per 1,000 population), Total Fertility Rate (live births per woman), and Net Reproduction Rate (surviving daughters per woman).
+After conducting experiments with different threshold values, we observed that a threshold of 0.85 yielded satisfactory results, achieveing a balance between inclusivity and relevance.
 
-Conducting a multiple linear regression analysis results in a mean squared error of 2.03. The coefficients for the model are as follows: [19, -571, 243338, 61, 1.7, -2.1, 1.9, 3].
+The variables identified through this process are: Expected Years of Schooling for females, the Coefficient of Human Inequality, Gross National Income Per Capita for the year 2017, Median Age as of 1 July, Rate of Natural Change per 1,000 population, Crude Birth Rate measured in births per 1,000 population, Total Fertility Rate denoting live births per woman, and Net Reproduction Rate denoting surviving daughters per woman.
+
+Upon conducting a multiple linear regression analysis on the selected variables, we obtained a mean squared error of 2.03, indicative of the model's predictive accuracy. 
+Additionally, the model achieved an R-squared score of 0.95, suggesting a high degree of variance explained by the model.
+
+The coefficients derived from the regression model provide insights into the strength and direction of the relationships between the independent variables and the target variable.
+The coefficients for the model are as follows: [19, -571, 243338, 61, 1.7, -2.1, 1.9, 3], with an intercept of 78.24.
 
 
 
