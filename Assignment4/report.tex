@@ -13,7 +13,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{booktabs}
-
+\usepackage{float}
 
 \addbibresource{refs.bib}
 
@@ -44,14 +44,14 @@ To identify the variable with the strongest linear relationship with the target 
 
 The variable with the highest absolute pearson coefficient is the Human development index, with a value of 0.92.
 Fig~\ref{fig:reg_human_development_index} shows the linear regression applied on the test set, using the model built on the train set.
-The model has a slope of 48.2, an intercept of 37.3, and a determination coefficient of 0.86. These values obviously slightly change depending on the seed used to split the data.
+The model has a slope of 48.2, an intercept of 37.3, and a determination coefficient of 0.87. These values obviously slightly change depending on the seed used to split the data.
 The mean squared error between the test and predicted sets is 9.45.
 
 The human development index measures a country's social and economic development. As specified on UNDP's website (\cite{UNDP:2023}), it is calculated based on the following factors: life expectancy, education, and standard of living.
 Thus the strong relationship between the two variables comes from the fact that life expectancy at birth is used to calculate the human development index.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics[width=\textwidth]{ola/pearson_correlation.pdf}
     \caption{Correlation Pearson}
@@ -59,7 +59,7 @@ Thus the strong relationship between the two variables comes from the fact that 
   \end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics[width=\textwidth]{ola/_linear_regression_human_development_index_(value).pdf}
     \caption{Linear Regression Human Development Index (value)}
@@ -81,7 +81,7 @@ For each transformation, we train a linear model to ascertain the resulting mean
 Before transformation, the Pearson correlation registers at 0.898, while after transformation, it increases marginally to 0.913.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics[width=\textwidth]{ola/spearman_correlation.pdf}
     \caption{Correlation Spearman}
@@ -90,7 +90,7 @@ Before transformation, the Pearson correlation registers at 0.898, while after t
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics[width=\textwidth]{ola/linear_transformation.pdf}
     \caption{Linear transformation}
@@ -124,14 +124,34 @@ By setting a predetermined threshold, we aimed to identify variables exerting si
 
 After conducting experiments with different threshold values, we observed that a threshold of 0.85 yielded satisfactory results, achieveing a balance between inclusivity and relevance.
 
-The variables identified through this process are: Expected Years of Schooling for females, the Coefficient of Human Inequality, Gross National Income Per Capita for the year 2017, Median Age as of 1 July, Rate of Natural Change per 1,000 population, Crude Birth Rate measured in births per 1,000 population, Total Fertility Rate denoting live births per woman, and Net Reproduction Rate denoting surviving daughters per woman.
+The variables identified through this process are: 
+
+\begin{verbatim}
+  Expected Years of Schooling for females 
+  The Coefficient of Human Inequality 
+  Gross National Income Per Capita for the year 2017
+  Median Age as of 1 July
+  Rate of Natural Change per 1,000 population
+  Crude Birth Rate measured in births per 1,000 population
+  Total Fertility Rate denoting live births per woman
+  Net Reproduction Rate denoting surviving daughters per woman.
+\end{verbatim}
 
 Upon conducting a multiple linear regression analysis on the selected variables, we obtained a mean squared error of 2.03, indicative of the model's predictive accuracy. 
 Additionally, the model achieved an R-squared score of 0.95, suggesting a high degree of variance explained by the model.
 
 The coefficients derived from the regression model provide insights into the strength and direction of the relationships between the independent variables and the target variable.
-The coefficients for the model are as follows: [19, -571, 243338, 61, 1.7, -2.1, 1.9, 3], with an intercept of 78.24.
-
+The intercept of the model is 78.24 and the coefficients for the model are as follows:
+\begin{verbatim}
+  19
+  -571
+  243338
+  61
+  1.7
+  -2.1
+  1.9
+  3
+\end{verbatim}
 
 
 
