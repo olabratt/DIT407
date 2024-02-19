@@ -64,22 +64,44 @@ color_values = [colors[y[i] - 1] for i in range(y.size)]
 
 # Problem 4
 
+print("\n====== Problem 4 ======\n")
+
+def find_permutation(clusters):
+    max_accuracy = 0
+    for perm in itertools.permutations(range(4)):
+        accuracy = accuracy_score([perm[label] for label in clusters.labels_], y)
+        if accuracy > max_accuracy:
+            max_accuracy = accuracy
+            best_perm = perm
+
+    return max_accuracy, best_perm
+
 kmeans = KMeans(3, random_state=SEED).fit(X_normalized)
 rand_index = rand_score(kmeans.labels_, y)
 print("Rand index :", rand_index)
 
-max_accuracy = 0
-for perm in itertools.permutations(range(4)):
-    accuracy = accuracy_score([perm[label] for label in kmeans.labels_], y)
-    if accuracy > max_accuracy:
-        max_accuracy = accuracy
-        best_perm = perm
+accuracy, perm = find_permutation(kmeans)
+print("Best accuracy :", accuracy)
+print("Best permutation :", dict(zip(range(4), perm)))
 
-print("Best accuracy :", max_accuracy)
-print("Best permutation :", dict(zip(range(4), best_perm)))
 
 # Problem 5
 
-clustering = AgglomerativeClustering(3).fit(X_normalized)
-shc.dendrogram(shc.linkage(X_normalized, method='average'))
+print("\n====== Problem 5 ======\n")
+
+linkage_options = ["ward", "complete", "average", "single"]
+
+best_accuracy = 0
+best_linkage = 0
+for linkage_option in linkage_options:
+    clustering = AgglomerativeClustering(3, linkage=linkage_option).fit(X_normalized)
+    accuracy, permutation = find_permutation(clustering)
+    if accuracy > best_accuracy:
+        best_accuracy = accuracy
+        best_linkage = linkage_option
+
+print("Best linkage option :", best_linkage)
+print("Accuracy :", best_accuracy)
+
+shc.dendrogram(shc.linkage(X_normalized, method=best_linkage))
 plt.show()
