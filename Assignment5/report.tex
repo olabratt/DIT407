@@ -66,8 +66,14 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}. Assignment 5 is abou
 \end{figure}
 
 \section*{Problem 4: Evaluating clustering}
+To apply \textit{k}-means clustering to the data, we use the \verb|KMeans| function from \verb|sklearn| with 3 as the number of clusters, and then build the model on the normalized data.
+
+The rand index is obtained by applying the \verb|rand_score| function on the labels of the clustering and the true labels. Its value is 0.90.
+
+Finally we iterate over all the possible permutations in the range $ [0\ldotp\ldotp4] $ to find the best accuracy score. With the permutation $\{0, 1, 2, 3\} \rightarrow \{2, 3, 1, 0\}$, the accuracy is equal to 0.92.
 
 \section*{Problem 5: Agglomerative clustering}
+We iterate over the linkage options and calculate the accuracy value after finding the right permutation. The best linkage option is the ward method.
 
 \begin{figure}[H]
   \begin{center}
