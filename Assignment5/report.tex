@@ -73,7 +73,12 @@ The rand index is obtained by applying the \verb|rand_score| function on the lab
 Finally we iterate over all the possible permutations in the range $ [0\ldotp\ldotp4] $ to find the best accuracy score. With the permutation $\{0, 1, 2, 3\} \rightarrow \{2, 3, 1, 0\}$, the accuracy is equal to 0.92.
 
 \section*{Problem 5: Agglomerative clustering}
-We iterate over the linkage options and calculate the accuracy value after finding the right permutation. The best linkage option is the ward method.
+We iterate over the linkage options and calculate the accuracy value after finding the right permutation for each of the linkage options. The best linkage option is the ward method, with an accuracy of 0.93.
+The dendrogram is shown in Figure~\ref{fig:dendrogram}
+
+By looking at the 2-dimension projections from Problem 3, some of the points are close neighbors to points that don't belong to the same cluster, and the boundaries between clusters are not clearly defined.
+Therefore the "single" linkage option which merge clusters depending on the minimum distance gives a low accuracy value of 0.35.
+Other linkage options give roughly the same accuracy (around 0.9).
 
 \begin{figure}[H]
   \begin{center}
