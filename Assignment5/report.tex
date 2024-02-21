@@ -36,8 +36,16 @@ the University of Gothenburg and DAT565 at Chalmers. The main source of informat
 is derived from the lectures and Skiena~\cite{Skiena:2024}. Assignment 5 is about distance and network methods.
 
 \section*{Problem 1: Preprocessing the dataset}
+To preprocess the dataset, we first load the data from the file \texttt{seeds.csv} using the \texttt{pandas} library. 
+We then normalize the data using the \texttt{StandardScaler} from \texttt{sklearn}.
+
+
 
 \section*{Problem 2: Determining the appropriate number of clusters}
+
+
+The normalized data is then used to calculate the inertia for different numbers of clusters. The inertia is plotted in Figure~\ref{fig:inertia}.
+Using the elbow method, we can see that the optimal number of clusters is 3.
 
 \begin{figure}[H]
   \begin{center}
@@ -48,6 +56,25 @@ is derived from the lectures and Skiena~\cite{Skiena:2024}. Assignment 5 is abou
 \end{figure}
 
 \section*{Problem 3: Visualizing the classes}
+
+
+To visually represent the classes, we initially project all the features onto a 2D plane. 
+It becomes evident that the seeds form distinct clusters corresponding to the three species groups. 
+However, certain features exhibit less distinct separation than others, such as asymmetry and compactness. 
+Notably, the scatter plot depicting the relationship between seed length and width clearly illustrates that seed sizes are readily discernible. 
+This is illustrated in Figure~\ref{fig:feature}.
+
+Subsequently, we employ Gaussian random projection to condense the data into a 2D space. 
+The outcome is depicted in Figure~\ref{fig:gaussian_random_projection}, where the different seed species remain distinguishable.
+ Finally, the UMAP projection is presented in Figure~\ref{fig:umap}, highlighting the distinctiveness of the seed species.
+
+The seeds are indeed distinguishable in the 2D space, particularly through size-related features (area, perimeter, length, width), 
+which exhibit a linear relationship. Conversely, other features demonstrate less separability
+
+The ability to distinguish seeds based on size-related features in a 2D space implies that clustering algorithms, 
+particularly those sensitive to geometric relationships, can effectively separate seed samples into distinct groups. 
+Algorithms like K-means or hierarchical clustering can leverage these separable features to identify natural clusters within the data. 
+However, features that are less separable might pose challenges for clustering algorithms, potentially leading to overlapping clusters. 
 
 \begin{figure}[H]
   \begin{center}
