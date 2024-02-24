@@ -1,0 +1,103 @@
+
+
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{stmaryrd}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{float}
+
+\addbibresource{refs.bib}
+
+\begin{document}
+
+\author{Ola Bratt \\
+  \href{mailto:ola.bratt@gmail.com}{ola.bratt@gmail.com}
+  \and
+  Patrick Attimont \\
+  \href{patrickattimont@gmail.com}{patrickattimont@gmail.com}
+}
+
+\title{DAT565/DIT407 Assignment 6}
+\date{2024-02-xx}
+
+\maketitle
+
+This paper is addressing the assignment 3 study queries within the \emph{Introduction to Data Science \& AI} course, DIT407 at 
+the University of Gothenburg and DAT565 at Chalmers. The main source of information for this project
+is derived from the lectures and Skiena~\cite{Skiena:2024}. Assignment 6 is about neural networks.
+
+\section*{Problem 1: The dataset}
+
+
+\section*{Problem 2: Single hidden layer}
+
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{ola/single_hidden_layer.pdf}
+    \caption{Single hidden layer}
+    \label{fig:single_hidden_layer}
+  \end{center}
+\end{figure}
+
+\section*{Problem 3: Two hidden layers}
+
+
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{ola/two_hidden_layer.pdf}
+    \caption{Two hidden layers}
+    \label{fig:two_hidden_layers}
+  \end{center}
+\end{figure}
+
+\section*{Problem 4: Convolutional neural network}
+
+
+
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{ola/cnn.pdf}
+    \caption{Convolutional neural network}
+    \label{fig:convolutional_neural_network}
+  \end{center}
+\end{figure}
+
+
+\newpage
+
+
+\printbibliography
+
+\section*{Appendix: Source Code}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily,
+  commentstyle=\color{OliveGreen},
+  keywordstyle=\bfseries\color{Magenta},
+  stringstyle=\color{YellowOrange},
+  numbers=left,
+  basicstyle=\footnotesize,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
+
+
+%\lstinputlisting{ola/assignment6.py}
+
+\end{document}
