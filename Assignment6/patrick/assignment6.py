@@ -32,22 +32,22 @@ test_dataloader = DataLoader(test_data, batch_size=batch_size, num_workers=1, pi
 # Problem 2
 
 def accuracy(network, dataloader):
-  network.eval()
-  
-  total_correct = 0
-  total_instances = 0
+    network.eval()
+    
+    total_correct = 0
+    total_instances = 0
 
-  with torch.no_grad():
-    for images, labels in dataloader:
-      images, labels = images.to(device), labels.to(device)
+    with torch.no_grad():
+        for images, labels in dataloader:
+            images, labels = images.to(device), labels.to(device)
 
-      classifications = torch.argmax(network(images), dim=1)
+            classifications = torch.argmax(network(images), dim=1)
 
-      correct_predictions = sum(classifications==labels).item()
+            correct_predictions = sum(classifications==labels).item()
 
-      total_correct+=correct_predictions
-      total_instances+=len(images)
-  return round(total_correct/total_instances, 3)
+            total_correct+=correct_predictions
+            total_instances+=len(images)
+    return round(total_correct/total_instances, 3)
 
 def train(model, dataloader, loss_fn, optimizer):
     for data, target in dataloader:
@@ -69,14 +69,15 @@ model = nn.Sequential(
     nn.Sigmoid()
 ).to(device)
 
-loss_fn = nn.CrossEntropyLoss().cuda()
-optimizer = optim.SGD(model.parameters(), lr = 0.01)
+loss_fn = nn.CrossEntropyLoss().to(device)
+optimizer = optim.SGD(model.parameters(), lr = 0.1)
 
 # for i in range(NUM_EPOCHS):
 #     train(model, train_dataloader, loss_fn, optimizer)
 #     print(accuracy(model, test_dataloader))
 
 # Problem 3
+
 NUM_EPOCHS = 40
 
 model = nn.Sequential(
@@ -88,8 +89,32 @@ model = nn.Sequential(
     nn.Sigmoid()
 ).to(device)
 
-loss_fn = nn.CrossEntropyLoss().cuda()
-optimizer = optim.SGD(model.parameters(), lr = 0.01)
+loss_fn = nn.CrossEntropyLoss().to(device)
+optimizer = optim.SGD(model.parameters(), lr = 0.1, weight_decay=1e-4)
+
+# for i in range(NUM_EPOCHS):
+#     train(model, train_dataloader, loss_fn, optimizer)
+#     print(accuracy(model, test_dataloader))
+
+# Problem 4
+
+NUM_EPOCHS = 40
+
+loss_fn = nn.CrossEntropyLoss().to(device)
+optimizer = optim.SGD(model.parameters(), lr = 0.1, weight_decay=1e-4)
+
+model = nn.Sequential(
+    nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, padding=1),
+    nn.ReLU(),
+    nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1),
+    nn.ReLU(),
+    nn.MaxPool2d(2),
+    nn.Flatten(),
+    nn.Linear(9216, 128),
+    nn.ReLU(),
+    nn.Linear(128, 10),
+    nn.Sigmoid()
+).to(device)
 
 for i in range(NUM_EPOCHS):
     train(model, train_dataloader, loss_fn, optimizer)
