@@ -69,21 +69,6 @@ def plot_images(dataloader, classes):
         fig.savefig('mnist_images.png', bbox_inches='tight')
         break  
 
-def calculate_accuracy(model, dataloader):
-    correct = 0
-    total = 0
-    model.eval()
-
-    with torch.no_grad():
-        for inputs, labels in dataloader:
-            outputs = model(inputs)
-            _, predicted = torch.max(outputs, 1)
-            correct += (predicted == labels).sum().item()
-            total += labels.size(0)
-    
-    accuracy = correct / total
-    
-    return accuracy
 
 
 def train(model, criterion, optimizer, train_loader, test_loader, num_epochs, name):
@@ -138,8 +123,6 @@ def train(model, criterion, optimizer, train_loader, test_loader, num_epochs, na
     fig.savefig(name  +  ".pdf", bbox_inches='tight')
 
 
-
-
 # Importing the dataset
 batch_size = 32
 transform = transforms.Compose([
@@ -170,8 +153,6 @@ num_epochs = 10
 criterion = nn.CrossEntropyLoss()
 
 train(modelSHL, criterion, optimizer, train_loader, test_loader, num_epochs, "single_hidden_layer")
-accuracy = calculate_accuracy(modelSHL, test_loader)
-print(f"Accuracy for single hidden layer: {accuracy:.4f}")
 
 
 # Two hidden layers
@@ -182,8 +163,6 @@ optimizer = optim.SGD(modelTHL.parameters(), lr=learning_rate, weight_decay=weig
 num_epochs = 40
 
 train(modelTHL, criterion, optimizer, train_loader, test_loader, num_epochs, "two_hidden_layer")
-accuracy = calculate_accuracy(modelTHL, test_loader)
-print(f"Accuracy for two hidden layers: {accuracy:.4f}")
 
 
 # Convolutional neural network
@@ -193,7 +172,5 @@ optimizer = optim.SGD(modelCNN.parameters(), lr=learning_rate, weight_decay=weig
 num_epochs = 40
 
 train(modelCNN, criterion, optimizer, train_loader, test_loader, num_epochs, "cnn")
-accuracy = calculate_accuracy(modelCNN, test_loader)
-print(f"Accuracy for convolutional neural network: {accuracy:.4f}")
 
 
