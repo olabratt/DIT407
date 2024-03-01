@@ -66,7 +66,7 @@ model = nn.Sequential(
     nn.Linear(img_size * img_size, 300),
     nn.ReLU(),
     nn.Linear(300, 10),
-    nn.Sigmoid()
+    nn.Softmax(dim=1)
 ).to(device)
 
 loss_fn = nn.CrossEntropyLoss().to(device)
@@ -85,16 +85,17 @@ model = nn.Sequential(
     nn.Linear(img_size * img_size, 500),
     nn.ReLU(),
     nn.Linear(500, 300),
+    nn.ReLU(),
     nn.Linear(300, 10),
-    nn.Sigmoid()
+    nn.Softmax(dim=1)
 ).to(device)
 
 loss_fn = nn.CrossEntropyLoss().to(device)
 optimizer = optim.SGD(model.parameters(), lr = 0.1, weight_decay=1e-4)
 
-# for i in range(NUM_EPOCHS):
-#     train(model, train_dataloader, loss_fn, optimizer)
-#     print(accuracy(model, test_dataloader))
+for i in range(NUM_EPOCHS):
+    train(model, train_dataloader, loss_fn, optimizer)
+    print(accuracy(model, test_dataloader))
 
 # Problem 4
 
@@ -113,7 +114,7 @@ model = nn.Sequential(
     nn.Linear(9216, 128),
     nn.ReLU(),
     nn.Linear(128, 10),
-    nn.Sigmoid()
+    nn.Softmax(dim=1)
 ).to(device)
 
 for i in range(NUM_EPOCHS):

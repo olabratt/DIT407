@@ -55,7 +55,8 @@ Figure \ref{fig:mnist_images} displays a random selection of images from the dat
 
 The neural network featuring a single hidden layer encompasses 784 input nodes (28x28), 300 hidden nodes, and 10 output nodes. 
 The ReLU function serves as the activation function for the hidden layer, complemented by batch normalization. 
-For the output layer, a logarithmic softmax function is utilized.
+For the output layer, a logarithmic softmax function is utilized since this is a mutliclass problem.
+The stochastic gradient descent is used with a learning rate of 0.1.
 
 Tables \ref{tabular:single_hidden_layer_metrics} and Figure \ref{fig:single_hidden_layer} illustrate the metrics for the single hidden layer model. 
 The training loss pertains to the loss observed during training, while the test loss represents the loss incurred during testing. 
@@ -168,9 +169,11 @@ Tables \ref{tabular:two_hidden_layers_metrics} and Figure \ref{fig:two_hidden_la
 
 The CNN model consists of two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. 
 The output layer utilizes logarithmic softmax activation. 
-The first convolutional layer has 16 output channels, and the second has 32 output channels. 
-The fully connected layers have 128 and 10 neurons, respectively.
-Performance metrics for the CNN model are detailed in Tables \ref{tabular:convolutional_neural_network_metrics} and Figure \ref{fig:convolutional_neural_network}
+The first convolutional layer has 16 output channels, and the second has 32 output channels.
+The fully connected layers have 1568 and 128 neurons, respectively.
+The optimization function is a stochastic gradient descent with a learning rate of 0.1 and a weight decay of 0.0001.
+
+Performance metrics for the CNN model trained over 40 epochs are detailed in Tables \ref{tabular:convolutional_neural_network_metrics} and Figure \ref{fig:convolutional_neural_network}
 
 \begin{table}
   \begin{center}
